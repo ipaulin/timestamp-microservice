@@ -4,10 +4,10 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
   "author": "Ivan Paulin",
-  "license": "ISC",
+  "license": "",
   "devDependencies": {
     "express": "^4.13.4"
   }
