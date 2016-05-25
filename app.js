@@ -40,7 +40,7 @@ function getJsonTime(unixTime, naturalTime) {
         'natural': naturalTime
     };
 
-    return JSON.stringify(jsonTime);
+    return jsonTime;
 }
 
 
@@ -53,15 +53,15 @@ app.get('/:time', function(req, res) {
 
     if(!isNaN(maybeUnixTimestamp) && (new Date(maybeUnixTimestamp)).getTime() > 0 ) {
 
-        res.send(getJsonTime(getUnixTime(maybeUnixTimestamp), getNaturalTime(maybeUnixTimestamp)));
+        res.json(getJsonTime(getUnixTime(maybeUnixTimestamp), getNaturalTime(maybeUnixTimestamp)));
 
     } else if((new Date(req.params.time)).getTime() > 0 ) {
 
-        res.send(getJsonTime(getUnixTime(req.params.time), req.params.time));
+        res.json(getJsonTime(getUnixTime(req.params.time), req.params.time));
 
     } else {
 
-        res.send(getJsonTime(0, 0));
+        res.json(getJsonTime(0, 0));
 
     }
 });
