@@ -8,7 +8,7 @@
   },
   "author": "Ivan Paulin",
   "license": "",
-  "devDependencies": {
-    "express": "^4.13.4"
+  "Dependencies": {
+    "express": "~4.13.4"
   }
 }
