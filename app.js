@@ -3,6 +3,8 @@
 var express = require('express');
 var app = express();
 
+var port = process.env.PORT || 8080;
+
 function getNaturalTime(time) {
     var monthNames = [
         "January",
@@ -68,7 +70,7 @@ app.get('/:time', function(req, res) {
 
 
 
-app.listen(8080, function(err, data) {
+app.listen(port, function(err, data) {
     if(err)
         throw err;
 
